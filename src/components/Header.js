@@ -1,7 +1,13 @@
 import React from 'react'
 
-export default function Header() {
+function Header() {
   return (
-    <div>Header</div>
+    <>
+      <nav>
+
+      </nav>
+    </>
   )
 }
+
+export default Header;
