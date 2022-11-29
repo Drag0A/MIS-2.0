@@ -10,7 +10,7 @@ export default function Navigation() {
   return (
     <nav className="navigation">
       <a href="/" className="brand-name">
-        Dashboard
+        Government College of Engineering, Aurangabad
       </a>
       <button
         className="hamburger"
