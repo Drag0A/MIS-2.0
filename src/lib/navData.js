@@ -1,30 +1,133 @@
-import { FaHome } from 'react-icons/fa';
-import { IoDocumentSharp } from 'react-icons/io5';
-import { FiLogIn } from 'react-icons/fi';
-import { IoSettings } from 'react-icons/io5';
+import { FiSettings, FiInfo } from 'react-icons/fi';
+import { AiOutlineContacts, AiFillFacebook, AiFillTwitterCircle, AiFillProfile } from 'react-icons/ai';
+import { FaHome, FaLinkedin } from 'react-icons/fa';
+import { BsQuestionSquareFill } from 'react-icons/bs';
+import { MdAccountCircle, MdPlaylistAddCheck, MdOutlineSupportAgent, MdReport } from 'react-icons/md';
+import '../styles/sidebar.css';
+
 export const navData = [
     {
-        id: 0,
-        icon: <FaHome size={20} />,
-        text: "Home",
-        link: "/"
+        "title": "General",
+        "icon": <FiSettings className="icons" />,
+        "childrens": [
+            {
+                "title": "Home",
+                "icon": <FaHome className="icons" />,
+                "path": "/"
+            },
+            {
+                "title": "About",
+                "icon": <FiInfo className="icons" />,
+                "path": "/about"
+            },
+            {
+                "title": "Contact",
+                "icon": <AiOutlineContacts className="icons" />,
+                "childrens": [
+                    {
+                        "title": "Facebook",
+                        "icon": <AiFillFacebook className="icons" />
+                    },
+                    {
+                        "title": "Twitter",
+                        "icon": <AiFillTwitterCircle className="icons" />
+                    },
+                    {
+                        "title": "LinkedIn",
+                        "icon": <FaLinkedin className="icons" />
+                    }
+                ]
+            },
+            {
+                "title": "FAQ",
+                "icon": <BsQuestionSquareFill className="icons" />
+            }
+        ]
     },
     {
-        id: 1,
-        icon: <IoDocumentSharp size={20} />,
-        text: "Documents",
-        link: "/documents"
+        "title": "Account",
+        "icon": <MdAccountCircle className="icons" />,
+        "childrens": [
+            {
+                "title": "Login",
+                "path": "/login",
+            },
+            {
+                "title": "Register",
+                "path": "/register",
+            },
+            {
+                "title": "Forgot Password",
+                "path": "/forgot-password",
+            },
+            {
+                "title": "Reset Password",
+                "path": "/reset-password",
+            }
+        ]
     },
     {
-        id: 2,
-        icon: <FiLogIn size={20} />,
-        text: "Logout",
-        link: "/logout"
+        "title": "Profile",
+        "icon": <AiFillProfile className="icons" />,
+        "childrens": [
+            {
+                "title": "Profile",
+                "path": "/profile"
+            },
+            {
+                "title": "Settings",
+                "childrens": [
+                    {
+                        "title": "Account",
+                        "path": "/settings/account"
+                    },
+                    {
+                        "title": "Billing",
+                        "childrens": [
+                            {
+                                "title": "Payment",
+                                "path": "/settings/billing/payment"
+                            },
+                            {
+                                "title": "Subscription",
+                                "path": "/settings/billing/subscription"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Notifications",
+                        "path": "/settings/notifications"
+                    }
+                ]
+            },
+            {
+                "title": "Logout",
+                "path": "/logout"
+            }
+        ]
     },
     {
-        id: 3,
-        icon: <IoSettings size={20} />,
-        text: "Settings",
-        link: "/settings"
+        "title": "Advance",
+        "icon": <MdPlaylistAddCheck className="icons" />,
+        "childrens": [
+            {
+                "title": "Search",
+                "path": "/search"
+            },
+            {
+                "title": "History",
+                "path": "/history"
+            }
+        ]
+    },
+    {
+        "title": "Support",
+        "icon": <MdOutlineSupportAgent className="icons" />,
+        "path": "/support"
+    },
+    {
+        "title": "Report Bug",
+        "icon": <MdReport className="icons" />,
+        "path": "/report-bug"
     }
 ]
